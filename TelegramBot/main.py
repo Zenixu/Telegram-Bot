@@ -86,9 +86,8 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"Haii {update.message.from_user.first_name}! 👋\n\n"
         "Selamat datang di Writerzie Bot!\n"
         "Saya adalah bot yang siap membantu kamu dengan dukungan AI.\n\n"
-        "Silakan pilih menu di bawah ini:"
     )
-    await update.message.reply_text(welcome_message, reply_markup=reply_markup)
+    await update.message.reply_text(welcome_message)
 
 async def help_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
     help_text = """
