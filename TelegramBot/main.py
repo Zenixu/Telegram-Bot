@@ -78,13 +78,13 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"Haii {update.message.from_user.first_name}! 👋\n\n"
         "Selamat datang di Writerzie Bot!\n"
         "Saya adalah bot yang siap membantu kamu dengan dukungan AI.\n\n"
-        "Silakan pilih menu di bawah ini:"
-        "/start"
-        "/help"
-        "/time"
-        "/profile"
-        "/ai"
-        "/reset"
+        "Silakan pilih menu di bawah ini: \n"
+        "/start\n"
+        "/help\n"
+        "/time\n"
+        "/profile\n"
+        "/ai\n"
+        "/reset\n"
     )
     await update.message.reply_text(welcome_message)
 
