@@ -74,18 +74,17 @@ async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
         # Initialize chat history for new user
         chat_histories[user_id] = []
     
-    keyboard = [
-    [InlineKeyboardButton("Help", callback_data='help')],
-    [InlineKeyboardButton("Profile", callback_data='profile')],
-    [InlineKeyboardButton("Time", callback_data='time')],
-    [InlineKeyboardButton("AI Chat", callback_data='ai_chat')]
-    ]
-    reply_markup = InlineKeyboardMarkup(keyboard)
-    
     welcome_message = (
         f"Haii {update.message.from_user.first_name}! 👋\n\n"
         "Selamat datang di Writerzie Bot!\n"
         "Saya adalah bot yang siap membantu kamu dengan dukungan AI.\n\n"
+        "Silakan pilih menu di bawah ini:"
+        "/start"
+        "/help"
+        "/time"
+        "/profile"
+        "/ai"
+        "/reset"
     )
     await update.message.reply_text(welcome_message)
 
